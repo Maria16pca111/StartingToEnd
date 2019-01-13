@@ -52,20 +52,31 @@ def isprime_upto_nth_noo(n):
     return flag
 
 #refactoring code
-def isprime_count_upto_nth_noo(n):
-    flag=False
-    count=0
-    if(n>0):
-        print(2)
-        count+=1
-        
-    for x in range(3,math.sqrt(n+1),2):
-        if(x%n==0):
+def IsPrime(n):
+    flag=True
+    for i in range(2,n**1/2):
+        if(n%i==0):
+            flag=False
             break
-        else:
-            count+=1
-        print(count)
     return flag
+
+
+#refactoring code
+# def nprimes(N):
+#     count=0
+#     if(N>=1):
+#         print 2
+#         count+=1      
+        
+#     i=3
+#     while(count!=N):
+#         if(IsPrime(i)):
+#             print(i)
+#             count+=1
+#         i=i+2
+        
+# N=input('number')
+# nprimes(N)
     
 
 
